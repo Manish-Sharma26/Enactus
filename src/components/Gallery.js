@@ -29,7 +29,7 @@ const Gallery = () => {
   };
 
   return (
-    <div className='h-screen w-screen bg-white' id='gallery'>
+    <div className='w-screen bg-white' id='gallery'>
       <div className='flex items-center justify-center h-[100px] '>
         <h1 className='text-7xl underline'>Gallery</h1>
       </div>
@@ -38,7 +38,7 @@ const Gallery = () => {
           <img key={index} src={image} alt={`Image ${index}`} className='w-[300px]' />
         ))}
       </div>
-      <div className='flex justify-center mt-4'>
+      <div className='flex p-5 justify-center mt-4'>
         <button onClick={prevPage} className='bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-l'>
           Previous
         </button>

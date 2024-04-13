@@ -6,13 +6,9 @@ const Contact = () => {
   return (
     <div className="w-full flex items-center justify-center flex-col" id="contact">
       <div className="flex items-center flex-col justify-center h-[150px] gap-4 ">
-        <h1 className="text-7xl underline">Contact</h1>
-        <h4 className="text-xl text-gray-600">
-          Join us on the social media networks. Your assistance is greatly
-          needed!
-        </h4>
+        <h1 className="text-7xl underline">Contact Us</h1>
       </div>
-      <div className="p-0 md:p-20 flex flex-col gap-8">
+      <div className="p-3 md:p-20 flex flex-col gap-8">
         <div className="flex items-center gap-5">
           <FaLocationDot fontSize={30} className="text-blue-900" />
           Motilal Nehru National Institute of Technology Teliarganj, Allahabad{" "}

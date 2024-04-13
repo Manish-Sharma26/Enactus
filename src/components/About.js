@@ -3,7 +3,7 @@ import Text from './Text'
 import bg from "../assets/Final-Round-2.png"
 const About = () => {
   return (
-    <div className="h-screen flex items-center flex-col" style={{background:`url(${bg})`}} id="about">
+    <div className="flex items-center flex-col" style={{background:`url(${bg})`}} id="about">
       <div className="flex w-full items-center justify-center h-[100px]">
         <h1 className="text-7xl underline">ABOUT &nbsp; US</h1>
       </div>
@@ -17,7 +17,7 @@ const About = () => {
           referrerpolicy="strict-origin-when-cross-origin"
           allowfullscreen
         ></iframe>
-        <div className="w-[40%] flex items-center justify-center"><Text/></div>
+        <div className="w-full md:w-[40%] mx-3 p-2 flex items-center justify-center"><Text/></div>
       </div>
     </div>
   );
