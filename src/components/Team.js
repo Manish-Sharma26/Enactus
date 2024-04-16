@@ -58,7 +58,7 @@ const Team = () => {
         {displayedTeamMembers.map(({ node }) => (
           <motion.div
             key={node.name}
-            className="bg-white h-[600px] w-[400px] rounded-lg shadow-md overflow-hidden relative"
+            className="bg-white h-[600px] w-full md:w-[400px] rounded-lg shadow-md overflow-hidden relative"
             whileHover={{ translateY: -10 }}
           >
             <img
