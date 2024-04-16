@@ -13,17 +13,16 @@ const Contact = () => {
 
   return (
     <div ref={ref} className="w-full flex items-center justify-center flex-col">
-      {inView && (
-        <motion.div
+        <div
           className="w-full"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <div className="flex items-center flex-col justify-center h-[150px] gap-4 ">
-            <h1 className="text-7xl underline">Contact Us</h1>
+          <div className="flex items-center flex-col justify-center gap-4 ">
+            <h1 className="text-3xl mt-5 mb-5 md:text-7xl underline">Contact Us</h1>
           </div>
-          <div className="p-3 md:p-20 flex flex-col gap-8 m-auto w-[700px] justify-center">
+          <div className="p-3 md:p-10 lg:p-20 flex flex-col gap-8 m-auto max-w-lg lg:max-w-3xl justify-center">
             <motion.div
               className="flex items-center gap-5"
               initial={{ opacity: 0, y: 20 }}
@@ -31,7 +30,7 @@ const Contact = () => {
               transition={{ duration: 0.5, delay: 0.2 }}
             >
               <FaLocationDot fontSize={30} className="text-blue-900" />
-              <span>
+              <span className="text-sm md:text-base">
                 Motilal Nehru National Institute of Technology Teliarganj,
                 Allahabad <br />
                 Uttar Pradesh (211004), India
@@ -67,15 +66,14 @@ const Contact = () => {
             </motion.div>
           </div>
           <motion.div
-            className="bg-black w-full flex items-center justify-center text-white p-10"
+            className="bg-black w-full flex items-center justify-center text-white p-5 md:p-10"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 1 }}
           >
-            Enactus MNNIT Allahbad
+            Enactus MNNIT Allahabad
           </motion.div>
-        </motion.div>
-      )}
+        </div>
     </div>
   );
 };

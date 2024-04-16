@@ -49,8 +49,8 @@ const Team = () => {
   return (
     <div className="w-screen bg-gray-100 flex items-center justify-center flex-wrap" id="team">
       <div className="flex items-center flex-col justify-center h-[150px] gap-4 ">
-        <h1 className="text-7xl underline">Our Team</h1>
-        <h4 className="text-xl text-gray-600">
+        <h1 className="text-3xl md:text-7xl underline">Our Team</h1>
+        <h4 className="text-xl text-gray-600 hidden md:block">
           Even though we are a small team, we still have goals!
         </h4>
       </div>
