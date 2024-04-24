@@ -26,7 +26,7 @@ const Gallery = () => {
   });
 
   return (
-    <div ref={ref} className="w-screen bg-white" id="gallery">
+    <div ref={ref} className="w-screen bg-white mt-11" id="gallery">
       <motion.div>
         <div className="flex items-center justify-center h-[100px] ">
           <h1 className="text-7xl bebas">Gallery</h1>

@@ -53,7 +53,7 @@ const Team = () => {
 
   return (
     <div
-      className="w-screen flex-col bg-gray-100 flex items-center justify-center flex-wrap"
+      className="w-screen flex-col mt-11 bg-gray-100 flex items-center justify-center flex-wrap"
       id="team"
     >
       <div className="flex items-center flex-col justify-center h-[150px] gap-4 ">

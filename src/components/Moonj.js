@@ -1,6 +1,21 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 const Moonj = () => {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const images = [
+    "https://enactus-mnnit.netlify.app/img/enactus/moonj/moonj%20(2).jpg",
+    "https://enactus-mnnit.netlify.app/img/enactus/moonj/moonj%20(3).jpg",
+    "https://enactus-mnnit.netlify.app/img/enactus/moonj/moonj%20(4).jpg"
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 5000); // Change image every 5 seconds
+
+    return () => clearInterval(interval);
+  }, []); // Run once on component mount
+
   return (
     <div className="container mx-auto px-8 py-12 mt-7">
       <h1 className="text-4xl font-bold mb-8 bebas">Project Moonj</h1>
@@ -26,10 +41,15 @@ const Moonj = () => {
             <li>Create a market for eco-friendly products</li>
           </ul>
         </div>
-        <div className="lg:w-1/2">
-          <img src={"https://enactus-mnnit.netlify.app/img/enactus/moonj/moonj%20(2).jpg"} alt="Moonj Image 1" className="mb-4 rounded-lg shadow-lg" />
-          <img src={"https://enactus-mnnit.netlify.app/img/enactus/moonj/moonj%20(3).jpg"} alt="Moonj Image 2" className="mb-4 rounded-lg shadow-lg" />
-          <img src={"https://enactus-mnnit.netlify.app/img/enactus/moonj/moonj%20(4).jpg"} alt="Moonj Image 3" className="rounded-lg shadow-lg" />
+        <div className="lg:w-1/2 relative flex items-center justify-center">
+          {images.map((image, index) => (
+            <img
+              key={index}
+              src={image}
+              alt={`Moonj Image ${index + 1}`}
+              className={`absolute rounded-md h-[550px] w-full object-cover top-0 left-0  transition-opacity duration-1000 ${index === currentImageIndex ? 'opacity-100' : 'opacity-0'}`}
+            />
+          ))}
         </div>
       </div>
     </div>

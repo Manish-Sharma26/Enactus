@@ -4,7 +4,7 @@ import bg from "../assets/Final-Round-2.png";
 
 const About = () => {
   return (
-    <div className="flex flex-col items-center relative" style={{ background: `url(${bg})`, backgroundSize: "cover", backgroundPosition: "center" }} id="about">
+    <div className="flex flex-col items-center relative mt-10" style={{ background: `url(${bg})`, backgroundSize: "cover", backgroundPosition: "center" }} id="about">
       <div className="flex w-full items-center justify-center h-[100px]">
         <h1 className="text-4xl md:text-7xl bebas">ABOUT &nbsp;US</h1>
       </div>
