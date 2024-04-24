@@ -14,9 +14,9 @@ const Navbar = () => {
     <nav className="glass left-0 z-20 mt-0 fixed w-full m-0 top-0 shadow-lg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          <div className="flex">
+          <a href="/" className="flex">
             <img src={enactus} alt="Logo" className="h-[50px] mb-3" />
-          </div>
+          </a>
           {/* Menu icon for mobile screens */}
           <div className="block md:hidden">
             <button
