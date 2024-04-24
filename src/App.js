@@ -16,9 +16,9 @@ import { SpeedInsights } from "@vercel/speed-insights/react"
 function App() {
   return (
     <Router>
+      <div className="App">
       <Analytics/>
       <SpeedInsights/>
-      <div className="App">
         <Navbar />
         <Routes>
           <Route
