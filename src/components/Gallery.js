@@ -26,12 +26,12 @@ const Gallery = () => {
   });
 
   return (
-    <div ref={ref} className="w-screen bg-white mt-11" id="gallery">
+    <div ref={ref} className="w-screen bg-white" id="gallery">
       <motion.div>
         <div className="flex items-center justify-center h-[100px] ">
-          <h1 className="text-7xl bebas">Gallery</h1>
+          <h1 className="text-7xl bebas  mt-10 mb-10">Gallery</h1>
         </div>
-        <div className="flex flex-wrap gap-5 items-center justify-center my-8">
+        <div className="flex flex-wrap gap-5 items-center justify-center">
           {projectsData.projects
             .slice(
               currentPage * imagesPerPage,

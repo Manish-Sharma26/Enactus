@@ -12,7 +12,7 @@ const Contact = () => {
   });
 
   return (
-    <div ref={ref} className="w-full flex items-center justify-center flex-col">
+    <div ref={ref} className="w-full flex items-center justify-center flex-col" id="contact">
         <div
           className="w-full"
           initial={{ opacity: 0, y: 20 }}
@@ -20,9 +20,9 @@ const Contact = () => {
           transition={{ duration: 0.5 }}
         >
           <div className="flex items-center flex-col justify-center gap-4 ">
-            <h1 className="text-3xl mt-16 mb-5 md:text-7xl bebas">Contact Us</h1>
+            <h1 className="text-3xl mt-10 mb-10 md:text-7xl bebas">Contact Us</h1>
           </div>
-          <div className="p-3 md:p-10 lg:p-20 flex flex-col gap-8 m-auto max-w-lg lg:max-w-3xl justify-center">
+          <div className="px-3 md:px-10 lg:px-20 mb-10 flex flex-col gap-8 m-auto max-w-lg lg:max-w-3xl justify-center">
             <motion.div
               className="flex items-center gap-5"
               initial={{ opacity: 0, y: 20 }}

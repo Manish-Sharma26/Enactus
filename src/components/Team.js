@@ -53,11 +53,11 @@ const Team = () => {
 
   return (
     <div
-      className="w-screen flex-col mt-11 bg-gray-100 flex items-center justify-center flex-wrap"
+      className="w-screen flex-col bg-gray-100 flex items-center justify-center flex-wrap"
       id="team"
     >
-      <div className="flex items-center flex-col justify-center h-[150px] gap-4 ">
-        <h1 className="text-3xl md:text-7xl bebas">Our Team</h1>
+      <div className="flex items-center flex-col justify-center gap-4 ">
+        <h1 className="text-3xl md:text-7xl bebas  mt-10 mb-10">Our Team</h1>
       </div>
       <div className="flex items-center justify-center gap-5 flex-wrap">
         {displayedTeamMembers.map(({ node, index }) => (
