@@ -6,7 +6,7 @@ const About = () => {
   return (
     <div className="flex flex-col items-center relative" style={{ background: `url(${bg})`, backgroundSize: "cover", backgroundPosition: "center" }} id="about">
       <div className="flex w-full items-center justify-center h-[100px]">
-        <h1 className="text-4xl md:text-7xl underline">ABOUT &nbsp; US</h1>
+        <h1 className="text-4xl md:text-7xl bebas">ABOUT &nbsp;US</h1>
       </div>
       <div className="flex flex-col md:flex-row mt-10 gap-7 items-center justify-center w-full">
         <iframe

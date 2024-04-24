@@ -20,7 +20,7 @@ const Contact = () => {
           transition={{ duration: 0.5 }}
         >
           <div className="flex items-center flex-col justify-center gap-4 ">
-            <h1 className="text-3xl mt-5 mb-5 md:text-7xl underline">Contact Us</h1>
+            <h1 className="text-3xl mt-5 mb-5 md:text-7xl bebas">Contact Us</h1>
           </div>
           <div className="p-3 md:p-10 lg:p-20 flex flex-col gap-8 m-auto max-w-lg lg:max-w-3xl justify-center">
             <motion.div

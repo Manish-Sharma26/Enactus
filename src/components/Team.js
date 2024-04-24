@@ -47,15 +47,12 @@ const Team = () => {
   const displayedTeamMembers = showAllMembers ? teamMembers : teamMembers.slice(0, 3);
 
   return (
-    <div className="w-screen bg-gray-100 flex items-center justify-center flex-wrap" id="team">
+    <div className="w-screen flex-col bg-gray-100 flex items-center justify-center flex-wrap" id="team">
       <div className="flex items-center flex-col justify-center h-[150px] gap-4 ">
-        <h1 className="text-3xl md:text-7xl underline">Our Team</h1>
-        <h4 className="text-xl text-gray-600 hidden md:block">
-          Even though we are a small team, we still have goals!
-        </h4>
+        <h1 className="text-3xl md:text-7xl bebas">Our Team</h1>
       </div>
       <div className="flex items-center justify-center gap-5 flex-wrap">
-        {displayedTeamMembers.map(({ node }) => (
+        {/* {displayedTeamMembers.map(({ node }) => (
           <motion.div
             key={node.name}
             className="bg-white h-[600px] w-full md:w-[400px] rounded-lg shadow-md overflow-hidden relative"
@@ -82,6 +79,38 @@ const Team = () => {
               ) : <p className="text-gray-500" title="LinkedIn not given">LinkedIn</p>}
             </div>
           </motion.div>
+        ))} */}
+        {displayedTeamMembers.map(({ node }) => (
+           <div class = "card">
+           <img src={node.image.url} alt={node.name}/>
+           <div class="bg-black">
+             <h2 className="text-2xl">
+              {node.name}
+             </h2>
+             <p className="text-xl">
+             Batch: {node.batch} <br />
+             {node.alumni ? "Alumni" : "Current"}
+             </p>
+             {node.linkedIn ? (
+                <a
+                  href={node.linkedIn}
+                  className="hover:underline"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  LinkedIn
+                </a>
+              ) : 
+              <a
+                  href="#"                  
+                  className="hover:underline"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  LinkedIn
+                </a>}
+           </div>
+         </div>
         ))}
       </div>
       <h2 className="text-blue-800 p-10 text-2xl underline flex items-center justify-center cursor-pointer w-full" onClick={() => setShowAllMembers(!showAllMembers)}>
