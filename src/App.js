@@ -11,10 +11,13 @@ import Neer from "./components/Neer";
 import Samvesh from "./components/Samvesh";
 import Sahyog from "./components/Sahyog";
 import Moonj from "./components/Moonj";
-
+import { Analytics } from "@vercel/analytics/react"
+import { SpeedInsights } from "@vercel/speed-insights/react"
 function App() {
   return (
     <Router>
+      <Analytics/>
+      <SpeedInsights/>
       <div className="App">
         <Navbar />
         <Routes>
