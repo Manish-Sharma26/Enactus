@@ -55,15 +55,22 @@ const Contact = () => {
               <span>+91 8340556926</span>
             </motion.div>
             <motion.div
-              className="flex items-center  gap-7"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.8 }}
-            >
-              <FaInstagram fontSize={30} className="text-blue-900" />
-              <FaYoutube fontSize={30} className="text-blue-900" />
-              <FaFacebook fontSize={30} className="text-blue-900" />
-            </motion.div>
+  className="flex items-center gap-7"
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.5, delay: 0.8 }}
+>
+  <a href="https://www.instagram.com/enactus_mnnit/" target="_blank" rel="noopener noreferrer">
+    <FaInstagram fontSize={30} className="text-blue-900" />
+  </a>
+  <a href="https://www.youtube.com/channel/UCA4d5xXy13G5iOslOG6AjXA" target="_blank" rel="noopener noreferrer">
+    <FaYoutube fontSize={30} className="text-blue-900" />
+  </a>
+  <a href="https://www.facebook.com/enactusmnnit/" target="_blank" rel="noopener noreferrer">
+    <FaFacebook fontSize={30} className="text-blue-900" />
+  </a>
+</motion.div>
+
           </div>
           <motion.div
             className="bg-black w-full flex items-center justify-center text-white p-5 md:p-10"
