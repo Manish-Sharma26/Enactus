@@ -9,8 +9,8 @@ const Header = () => {
     "https://enactus-mnnit.netlify.app/img/bgImage.jpg",
     "https://enactus-mnnit.netlify.app/img/bgImage.jpg",
   ];
-  const texts = ["Welcome to the MNNIT Enactus", "Welcome to the Lorem Ipsum ", "Welcome to the MNNIT Campus"];
-  const subtexts = ["Lorem ipsum dolor sit amet consectetur, adipisicing elitLorem ipsum dolor sit amet consectetur, adipisicing elit.", "Lorem ipsum dolor sit amet consectetur, adipisicing", "SuLorem ipsum dolor sit amet consectetur, adipisicing elit."];
+  const texts = ["WELCOME TO OFFICIAL PAGE OF ENACTUS MNNIT ALLAHABAD", "WHO TAKE ENTREPRENEURIAL ACTION FOR OTHERs ", "Welcome to the MNNIT Campus"];
+  const subtexts = ["WE BELIEVE INVESTING IN STUDENTS", "Lorem ipsum dolor sit amet consectetur, adipisicing", "SuLorem ipsum dolor sit amet consectetur, adipisicing elit."];
  
   useEffect(() => {
     const intervalId = setInterval(() => {
@@ -37,7 +37,7 @@ const Header = () => {
               <motion.h1 className="text-white bebas md:text-7xl font-bold uppercase text-4xl" key={texts[currentImageIndex]} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 1 }}>
                 {texts[currentImageIndex]}
               </motion.h1>
-              <motion.h1 className="text-gray-400 text-center text-lg md:text-xl w-[98%] mx-auto" key={subtexts[currentImageIndex]} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 1.5 }}>
+              <motion.h1 className="text-gray-400 text-center text-lg bebas md:text-5xl w-[98%] mx-auto" key={subtexts[currentImageIndex]} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 1.5 }}>
                 {subtexts[currentImageIndex]}
               </motion.h1>
               <a href="#about" className="button-77" role="button" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 2 }}>

@@ -101,47 +101,55 @@ const TeamPage = () => {
             <div className="flex flex-wrap mx-8 mb-7 items-center justify-between">
               <h1 className="text-4xl bebas">Team</h1>
               <div className="btn-group">
-                <button
-                  onClick={() => handleFilter("web")}
-                >
-                  Web
-                </button>
-                <button
-                  onClick={() => handleFilter("rad")}
-                >
-                  RAD
-                </button>
-                <button
-                  onClick={() => handleFilter("content")}
-                >
-                  Content
-                </button>
-                <button
-                  onClick={() => handleFilter("field")}
-                >
-                  Field
-                </button>
-                <button
-                  onClick={() => handleFilter("design")}
-                >
-                  Design
-                </button>
-                <button
-                  onClick={() => handleFilter("marketing")}
-                >
-                  Marketing
-                </button>
-              </div>
+      <button
+        onClick={() => handleFilter("web")}
+        className={filterType === "web" ? "bg-gray-300" : ""}
+      >
+        Web
+      </button>
+      <button
+        onClick={() => handleFilter("rad")}
+        className={filterType === "rad" ? "bg-gray-300" : ""}
+      >
+        RAD
+      </button>
+      <button
+        onClick={() => handleFilter("content")}
+        className={filterType === "content" ? "bg-gray-300" : ""}
+      >
+        Content
+      </button>
+      <button
+        onClick={() => handleFilter("field")}
+        className={filterType === "field" ? "bg-gray-300" : ""}
+      >
+        Field
+      </button>
+      <button
+        onClick={() => handleFilter("design")}
+        className={filterType === "design" ? "bg-gray-300" : ""}
+      >
+        Design
+      </button>
+      <button
+        onClick={() => handleFilter("marketing")}
+        className={filterType === "marketing" ? "bg-gray-300" : ""}
+      >
+        Marketing
+      </button>
+    </div>
             </div>
             <div className="flex items-center mx-8 mb-4 justify-center">
               <div className="btn-group mb-5">
                 <button
                   onClick={handleAlumniFilter}
+                  className={showAlumni==true?"bg-gray-300":""}
                 >
                   Alumni
                 </button>
                 <button
                   onClick={handleCurrentFilter}
+                  className={showAlumni==false?"bg-gray-300":""}
                 >
                   Current
                 </button>

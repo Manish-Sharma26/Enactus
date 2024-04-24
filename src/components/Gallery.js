@@ -5,7 +5,11 @@ import projectsData from "./data.json"; // Importing the data.json file
 
 const Gallery = () => {
   const [currentPage, setCurrentPage] = useState(0);
-  const imagesPerPage = 8;
+  const imagesPerPage = 10;
+
+  // Go to data .json to add more images in gallery and it will reflect inside the website
+
+
   const totalPages = Math.ceil(projectsData.projects.length / imagesPerPage);
 
   const nextPage = () => {
@@ -38,9 +42,9 @@ const Gallery = () => {
                 <img
                   src={project.image}
                   alt={project.name}
-                  className="w-[400px] h-[300px] object-cover bg-black rounded-md"
+                  className="w-[250px] h-[250px] object-cover bg-black rounded-md"
                 />
-                <figcaption>{project.name}</figcaption>
+                <figcaption className="text-sm">{project.name}</figcaption>
               </figure>
             ))}
         </div>
