@@ -99,7 +99,7 @@ const TeamPage = () => {
         <div>
           <div className="mt-7 mb-5">
             <div className="flex flex-wrap mx-8 mb-7 items-center justify-between">
-              <h1 className="text-4xl bebas">Team</h1>
+              <h1 className="text-4xl bebas">{filterType} Team</h1>
               <div className="btn-group">
       <button
         onClick={() => handleFilter("web")}
