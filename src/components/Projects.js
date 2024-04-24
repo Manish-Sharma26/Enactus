@@ -4,7 +4,7 @@ import { Link } from "react-router-dom"; // Import Link from React Router
 
 const Projects = () => {
   return (
-    <div className="mb-6 pb-7 w-screen relative mt-10" id="projects">
+    <div className="mb-6 pb-7 w-screen relative mt-10 bg-slate-200" id="projects">
       <div className="flex gap-2 flex-wrap flex-col items-center justify-center relative z-10">
         <div className="flex items-center justify-center h-[100px] ">
           <h1 className="text-7xl bebas">Projects</h1>
