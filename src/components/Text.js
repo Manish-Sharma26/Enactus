@@ -2,8 +2,8 @@ import React from 'react';
 
 const Text = () => {
     return (
-        <div className="mt-8 md:mt-0"> {/* Add margin-top for smaller screens */}
-            <div className="mt-10 text-lg col-lg-7">
+        <div className=""> {/* Add margin-top for smaller screens */}
+            <div className="text-lg col-lg-7">
                 <h3 className="text-2xl title-big font-bold">A little more about Enactus Allahabad</h3>
                 <p className="mt-3">Enactus <b>Allahabad</b>, established in _____, is an organization, consisting of a group of dedicated and driven students who share the mutual aim of creating a better and more sustainable world and seek to uplift the communities through entrepreneurial action.</p>
 

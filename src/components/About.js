@@ -4,11 +4,11 @@ import bg from "../assets/Final-Round-2.png";
 
 const About = React.forwardRef((props, ref) => {
   return (
-    <div className="flex flex-col items-center relative " style={{ background: `url(${bg})`, backgroundSize: "cover", backgroundPosition: "center" }} id="about" ref={ref}>
+    <div className="flex flex-col items-center relative" style={{ background: `url(${bg})`, backgroundSize: "cover", backgroundPosition: "center" }} id="about" ref={ref}>
       <div className="flex w-full items-center justify-center">
         <h1 className="text-4xl md:text-7xl bebas mt-10">ABOUT &nbsp;US</h1>
       </div>
-      <div className="flex flex-col md:flex-row gap-7 items-center justify-center w-full">
+      <div className="flex flex-col md:flex-row gap-7  mb-10 items-center justify-center w-full">
         <iframe
           className="w-full md:w-[500px] h-[315px] md:h-[315px]"
           src="https://www.youtube.com/embed/1U3zF6ll27E?si=9WtqN0-xCdsO22M_"
