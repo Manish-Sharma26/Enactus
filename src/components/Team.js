@@ -27,7 +27,7 @@ export const getPosts = async () => {
   return result.teamMembersConnection.edges;
 };
 
-const Team = () => {
+const Team = React.forwardRef((props,ref) => {
   const [teamMembers, setTeamMembers] = useState([]);
   const [showAllMembers, setShowAllMembers] = useState(false);
   console.log(teamMembers);
@@ -55,6 +55,7 @@ const Team = () => {
     <div
       className="w-screen flex-col bg-gray-100 flex items-center justify-center flex-wrap"
       id="team"
+      ref={ref}
     >
       <div className="flex items-center flex-col justify-center gap-4 ">
         <h1 className="text-3xl md:text-7xl bebas  mt-10 mb-10">Our Team</h1>
@@ -99,6 +100,6 @@ const Team = () => {
       </h2>
     </div>
   );
-};
+});
 
 export default Team;

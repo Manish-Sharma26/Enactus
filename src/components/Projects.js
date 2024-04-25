@@ -2,9 +2,9 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom"; // Import Link from React Router
 
-const Projects = () => {
+const Projects = React.forwardRef((props,ref) => {
   return (
-    <div className="pb-7 w-screen relative  bg-slate-200" id="projects">
+    <div className="pb-7 w-screen relative  bg-slate-200" id="projects" ref={ref}>
       <div className="flex gap-2 flex-wrap flex-col items-center justify-center relative z-10">
         <div className="flex items-center justify-center h-[100px] ">
           <h1 className="text-7xl bebas mt-10 mb-10">Projects</h1>
@@ -63,6 +63,6 @@ const Projects = () => {
       </div>
     </div>
   );
-};
+});
 
 export default Projects;

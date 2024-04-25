@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion"; // Import AnimatePresence for smooth image transition
+import React, { useState, useEffect, forwardRef } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import Logo from "../assets/logowhite.png";
 
-const Header = () => {
+const Header = forwardRef((props, ref) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const images = [
     "https://enactus-mnnit.netlify.app/img/bgImage.jpg",
@@ -11,7 +11,7 @@ const Header = () => {
   ];
   const texts = ["WELCOME TO OFFICIAL PAGE OF ENACTUS MNNIT ALLAHABAD", "WHO TAKE ENTREPRENEURIAL ACTION FOR OTHERs ", "Welcome to the MNNIT Campus"];
   const subtexts = ["WE BELIEVE INVESTING IN STUDENTS", "Lorem ipsum dolor sit amet consectetur, adipisicing", "SuLorem ipsum dolor sit amet consectetur, adipisicing elit."];
- 
+
   useEffect(() => {
     const intervalId = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
@@ -20,7 +20,7 @@ const Header = () => {
   }, []);
 
   return (
-    <div className="w-screen h-screen relative" id="home">
+    <div className="w-screen h-screen relative" id="home" ref={ref}>
       <AnimatePresence>
         <motion.div
           key={currentImageIndex}
@@ -49,6 +49,6 @@ const Header = () => {
       </AnimatePresence>
     </div>
   );
-};
+});
 
 export default Header;

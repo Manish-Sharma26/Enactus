@@ -1,10 +1,10 @@
-import React from "react";
+import React, { useRef } from "react";
 import Text from './Text'
 import bg from "../assets/Final-Round-2.png";
 
-const About = () => {
+const About = React.forwardRef((props, ref) => {
   return (
-    <div className="flex flex-col items-center relative " style={{ background: `url(${bg})`, backgroundSize: "cover", backgroundPosition: "center" }} id="about">
+    <div className="flex flex-col items-center relative " style={{ background: `url(${bg})`, backgroundSize: "cover", backgroundPosition: "center" }} id="about" ref={ref}>
       <div className="flex w-full items-center justify-center">
         <h1 className="text-4xl md:text-7xl bebas mt-10">ABOUT &nbsp;US</h1>
       </div>
@@ -23,6 +23,6 @@ const About = () => {
       </div>
     </div>
   );
-};
+});
 
 export default About;

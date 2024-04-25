@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import projectsData from "./data.json"; // Importing the data.json file
 
-const Gallery = () => {
+const Gallery = React.forwardRef((props,ref) => {
   const [currentPage, setCurrentPage] = useState(0);
   const imagesPerPage = 10;
 
@@ -20,10 +20,6 @@ const Gallery = () => {
     setCurrentPage((prevPage) => (prevPage - 1 + totalPages) % totalPages);
   };
 
-  const { ref, inView } = useInView({
-    threshold: 0.5,
-    triggerOnce: true,
-  });
 
   return (
     <div ref={ref} className="w-screen bg-white" id="gallery">
@@ -69,6 +65,6 @@ const Gallery = () => {
       </motion.div>
     </div>
   );
-};
+});
 
 export default Gallery;

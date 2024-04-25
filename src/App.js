@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import About from "./components/About";
 import Gallery from "./components/Gallery";
@@ -15,66 +15,34 @@ import Moonj from "./components/Moonj";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/react";
 import { useLocation } from "react-router-dom";
+import { useInView } from "react-intersection-observer";
 
 function App() {
   const [activeSection, setActiveSection] = useState("");
   // const location = useLocation();
 
+  // Intersection observer callback function
+  const [homeRef, homeInView] = useInView({ threshold: 0.5 });
+  const [aboutRef, aboutInView] = useInView({ threshold: 0.5 });
+  const [projectsRef, projectsInView] = useInView({ threshold: 0.5 });
+  const [galleryRef, galleryInView] = useInView({ threshold: 0.5 });
+  const [teamRef, teamInView] = useInView({ threshold: 0.5 });
+  const [contactRef, contactInView] = useInView({ threshold: 0.5 });
+
+  // Update active section based on intersection observer
   useEffect(() => {
-    const handleScroll = () => {
-      const homeElement = document.getElementById("home");
-      const aboutElement = document.getElementById("about");
-      const projectsElement = document.getElementById("projects");
-      const galleryElement = document.getElementById("gallery");
-      const teamElement = document.getElementById("team");
-      const contactElement = document.getElementById("contact");
+    if (homeInView) setActiveSection("home");
+    else if (aboutInView) setActiveSection("about");
+    else if (projectsInView) setActiveSection("projects");
+    else if (galleryInView) setActiveSection("gallery");
+    else if (teamInView) setActiveSection("team");
+    else if (contactInView) setActiveSection("contact");
+  }, [homeInView, aboutInView, projectsInView, galleryInView, teamInView, contactInView]);
 
-      const scrollPosition = window.scrollY + 150;
-
-      if (
-        scrollPosition < aboutElement.offsetTop ||
-        scrollPosition < homeElement.offsetTop
-      ) {
-        setActiveSection("home");
-      } else if (
-        scrollPosition >= aboutElement.offsetTop &&
-        scrollPosition < projectsElement.offsetTop
-      ) {
-        setActiveSection("about");
-      } else if (
-        scrollPosition >= projectsElement.offsetTop &&
-        scrollPosition < galleryElement.offsetTop
-      ) {
-        setActiveSection("projects");
-      } else if (
-        scrollPosition >= galleryElement.offsetTop &&
-        scrollPosition < teamElement.offsetTop
-      ) {
-        setActiveSection("gallery");
-      } else if (
-        scrollPosition >= teamElement.offsetTop &&
-        scrollPosition < contactElement.offsetTop
-      ) {
-        setActiveSection("team");
-      } else {
-        setActiveSection("contact");
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    // Cleanup function to remove the scroll event listener
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
-  useEffect(() => {
-    // Update the active section when the location changes
-    if (window.location.pathname === "/") {
-      setActiveSection("home");
-    }
-  }, []);
+  // Update active section when location changes
+  // useEffect(() => {
+  //   if (window.location.pathname === "/") setActiveSection("home");
+  // }, []);
 
   return (
     <Router>
@@ -88,12 +56,12 @@ function App() {
             exact
             element={
               <div>
-                <Header />
-                <About />
-                <Projects />
-                <Gallery />
-                <Team />
-                <Contact />
+                <Header ref={homeRef} />
+                <About ref={aboutRef} />
+                <Projects ref={projectsRef} />
+                <Gallery ref={galleryRef} />
+                <Team ref={teamRef} />
+                <Contact ref={contactRef} />
               </div>
             }
           ></Route>
