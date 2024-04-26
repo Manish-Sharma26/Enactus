@@ -19,9 +19,9 @@ const Navbar = ({ activeSection }) => {
     }
   };
 
-  const handleHomeClick = () => {
+  const handleHomeClick = (link) => {
     if (window.location.pathname === "/") {
-      handleSmoothScroll("home");
+      handleSmoothScroll(link);
     } else {
       history("/");
     }
@@ -31,7 +31,7 @@ const Navbar = ({ activeSection }) => {
     <nav className="glass left-0 z-20 mt-0 fixed w-full m-0 top-0 shadow-lg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          <a href="/" className="flex" onClick={handleHomeClick}>
+          <a href="/" className="flex" onClick={()=>{handleHomeClick("home")}}>
             <img src={enactus} alt="Logo" className="h-[50px] mb-3" />
           </a>
           <div className="block md:hidden">
@@ -51,37 +51,37 @@ const Navbar = ({ activeSection }) => {
             <NavLink
               label="Home"
               id="home"
-              handleSmoothScroll={handleSmoothScroll}
+              handleHomeClick={handleHomeClick}
               active={activeSection === "home"}
             />
             <NavLink
               label="About"
               id="about"
-              handleSmoothScroll={handleSmoothScroll}
+              handleHomeClick={handleHomeClick}
               active={activeSection === "about"}
             />
             <NavLink
               label="Projects"
               id="projects"
-              handleSmoothScroll={handleSmoothScroll}
+              handleHomeClick={handleHomeClick}
               active={activeSection === "projects"}
             />
             <NavLink
               label="Gallery"
               id="gallery"
-              handleSmoothScroll={handleSmoothScroll}
+              handleHomeClick={handleHomeClick}
               active={activeSection === "gallery"}
             />
             <NavLink
               label="Team"
               id="team"
-              handleSmoothScroll={handleSmoothScroll}
+              handleHomeClick={handleHomeClick}
               active={activeSection === "team"}
             />
             <NavLink
               label="Contact Us"
               id="contact"
-              handleSmoothScroll={handleSmoothScroll}
+              handleHomeClick={handleHomeClick}
               active={activeSection === "contact"}
             />
             <a
@@ -97,37 +97,37 @@ const Navbar = ({ activeSection }) => {
             <NavLink
               label="Home"
               id="home"
-              handleSmoothScroll={handleSmoothScroll}
+              handleHomeClick={handleHomeClick}
               active={activeSection === "home"}
             />
             <NavLink
               label="About"
               id="about"
-              handleSmoothScroll={handleSmoothScroll}
+              handleHomeClick={handleHomeClick}
               active={activeSection === "about"}
             />
             <NavLink
               label="Projects"
               id="projects"
-              handleSmoothScroll={handleSmoothScroll}
+              handleHomeClick={handleHomeClick}
               active={activeSection === "projects"}
             />
             <NavLink
               label="Gallery"
               id="gallery"
-              handleSmoothScroll={handleSmoothScroll}
+              handleHomeClick={handleHomeClick}
               active={activeSection === "gallery"}
             />
             <NavLink
               label="Team"
               id="team"
-              handleSmoothScroll={handleSmoothScroll}
+              handleHomeClick={handleHomeClick}
               active={activeSection === "team"}
             />
             <NavLink
               label="Contact Us"
               id="contact"
-              handleSmoothScroll={handleSmoothScroll}
+              handleHomeClick={handleHomeClick}
               active={activeSection === "contact"}
             />
             <a
@@ -145,10 +145,10 @@ const Navbar = ({ activeSection }) => {
   );
 };
 
-const NavLink = ({ label, id, handleSmoothScroll, active }) => {
+const NavLink = ({ label, id, handleHomeClick, active }) => {
   return (
     <a
-      onClick={() => handleSmoothScroll(id)}
+    onClick={()=>{handleHomeClick(id)}}
       className={`text-gray-300 hover:bg-gray-600 transition-all duration-150 hover:text-white px-3 py-2 rounded-md text-sm font-medium cursor-pointer ${active ? "bg-gray-600" : ""}`}
     >
       {label}

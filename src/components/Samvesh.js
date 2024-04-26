@@ -18,10 +18,9 @@ const Samvesh = () => {
 
   return (
     <div className="container mx-auto px-8 py-12 mt-7">
-      <h1 className="text-4xl font-bold mb-8 bebas">Project Samvesh</h1>
-      <div className="flex flex-col lg:flex-row gap-8">
-        <div className="container mx-auto py-12 lg:w-1/2">
-          <h1 className="text-4xl font-bold mb-8">About Project Samvesh</h1>
+      <div className="flex flex-col mt-5 lg:flex-row gap-8">
+        <div className="container mx-auto pl-12 lg:w-1/2">
+          <h1 className="text-4xl bebas font-bold mb-8">About Project Samvesh</h1>
           <div className="text-lg mb-8">
             <p>
               "Project Samvesh" aims to address the issue of menstrual hygiene and provide sustainable solutions for women in rural areas. Many women in rural India lack access to affordable and hygienic menstrual products, leading to health risks and social stigmatization.
@@ -33,7 +32,7 @@ const Samvesh = () => {
               Additionally, the project includes awareness campaigns and educational workshops to break the taboo surrounding menstruation and promote healthy practices. By fostering a supportive environment, we strive to improve the overall well-being and dignity of women in rural communities.
             </p>
           </div>
-          <h2 className="text-2xl font-bold mb-4">Key Initiatives:</h2>
+          <h2 className="text-2xl font-bold mb-4">Key Objectives:</h2>
           <ul className="list-disc ml-8">
             <li>Production of eco-friendly menstrual products</li>
             <li>Empowerment of local women</li>

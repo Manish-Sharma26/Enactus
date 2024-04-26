@@ -82,14 +82,7 @@ const Contact = React.forwardRef((props, ref) => {
             </a>
           </motion.div>
         </div>
-        <motion.div
-          className="bg-black w-full flex items-center justify-center text-white p-5 md:p-10"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 1 }}
-        >
-          Enactus MNNIT Allahabad
-        </motion.div>
+        
       </div>
     </div>
   );

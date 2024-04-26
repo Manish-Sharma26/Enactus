@@ -18,10 +18,9 @@ const Sahyog = () => {
 
   return (
     <div className="container mx-auto px-8 py-12 mt-7">
-      <h1 className="text-4xl font-bold mb-8 bebas">Project Sahyog</h1>
-      <div className="flex flex-col lg:flex-row gap-8">
-        <div className="container mx-auto py-12 lg:w-1/2">
-          <h1 className="text-4xl font-bold mb-8">About Project Sahyog</h1>
+      <div className="flex flex-col mt-5 lg:flex-row gap-8">
+        <div className="container mx-auto pl-12 lg:w-1/2">
+          <h1 className="text-4xl font-bold mb-8 bebas">About Project Sahyog</h1>
           <div className="text-lg mb-8">
             <p>
               "Project Sahyog" aims to foster collaboration and support among communities in Prayagraj, India. With a focus on empowering local residents and addressing societal challenges, the project seeks to create sustainable solutions through collective action.

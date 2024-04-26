@@ -18,10 +18,9 @@ const Neer = () => {
 
   return (
     <div className="container mx-auto px-8 py-12 mt-7">
-      <h1 className="text-4xl font-bold mb-8 bebas">Project Neer</h1>
-      <div className="flex flex-col lg:flex-row gap-8">
-        <div className="container mx-auto py-12 lg:w-1/2">
-          <h1 className="text-4xl font-bold mb-8">About Project Neer</h1>
+      <div className="flex flex-col mt-5 lg:flex-row gap-8">
+        <div className="container mx-auto pl-12 lg:w-1/2">
+          <h1 className="text-4xl font-bold mb-8 bebas">About Project Neer</h1>
           <div className="text-lg mb-8">
             <p>
               "Project Neer" is dedicated to reviving the traditional craftsmanship of pottery in Prayagraj, India. With a focus on uplifting the potter community and addressing environmental concerns, the project aims to create water purifiers using locally sourced mud pots.
@@ -42,7 +41,7 @@ const Neer = () => {
             <li>Creates additional income opportunities</li>
           </ul>
         </div>
-        <div className="lg:w-1/2 relative flex items-center justify-center">
+        <div className="lg:w-1/2 relative h-[550px] flex items-center justify-center">
           {images.map((image, index) => (
             <img
               key={index}

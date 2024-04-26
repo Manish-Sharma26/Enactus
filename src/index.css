@@ -307,7 +307,6 @@ main {
 }
 
 .btn-group button {
-  color: #000;
   font-weight: bold;
   border: 0;
   border-bottom: var(--borderWidth) solid var(--borderColor);

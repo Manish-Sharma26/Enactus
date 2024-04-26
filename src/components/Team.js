@@ -57,8 +57,8 @@ const Team = React.forwardRef((props,ref) => {
       id="team"
       ref={ref}
     >
-      <div className="flex items-center flex-col justify-center gap-4 ">
-        <h1 className="text-3xl md:text-7xl bebas  mt-10 mb-10">Our Team</h1>
+      <div className="flex items-center flex-col justify-center ">
+        <h1 className="text-3xl md:text-7xl bebas mt-5 mb-10">Our Team</h1>
       </div>
       <div className="flex items-center justify-center gap-5 flex-wrap">
         {displayedTeamMembers.map(({ node, index }) => (

@@ -16,6 +16,7 @@ import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/react";
 import { useLocation } from "react-router-dom";
 import { useInView } from "react-intersection-observer";
+import BottomFooter from "./components/BottomFooter";
 
 function App() {
   const [activeSection, setActiveSection] = useState("");
@@ -71,6 +72,7 @@ function App() {
           <Route path="/sahyog" element={<Sahyog />} />
           <Route path="/moonj" element={<Moonj />} />
         </Routes>
+        <BottomFooter/>
       </div>
     </Router>
   );
