@@ -40,12 +40,12 @@ const Moonj = () => {
             <li>Create a market for eco-friendly products</li>
           </ul>
         </div>
-        <div className="lg:w-1/2 relative flex items-center justify-center">
+        <div className="lg:w-1/2 relative h-[550px] flex items-center justify-center">
           {images.map((image, index) => (
             <img
               key={index}
               src={image}
-              alt={`Moonj Image ${index + 1}`}
+              alt={`Neer Image ${index + 1}`}
               className={`absolute rounded-md h-[550px] w-full object-cover top-0 left-0  transition-opacity duration-1000 ${index === currentImageIndex ? 'opacity-100' : 'opacity-0'}`}
             />
           ))}
