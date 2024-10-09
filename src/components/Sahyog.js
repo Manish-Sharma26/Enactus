@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Sahyog = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const navigate = useNavigate();  // Initialize useNavigate
   const images = [
     "https://enactus-mnnit.netlify.app/img/enactus/sahyog/sahyog%20(1).jpg",
     "https://enactus-mnnit.netlify.app/img/enactus/sahyog/sahyog%20(2).jpg",
@@ -9,12 +11,24 @@ const Sahyog = () => {
   ];
 
   useEffect(() => {
+    window.scrollTo(0, 0);  
     const interval = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
     }, 5000); // Change image every 5 seconds
 
     return () => clearInterval(interval);
   }, []); // Run once on component mount
+
+  const handleBackClick = () => {
+    navigate('/');  // Navigate to home page first
+    window.scrollTo(0,0);
+    setTimeout(() => {
+      const projectSection = document.querySelector('#projects'); 
+      if (projectSection) {
+        projectSection.scrollIntoView({ behavior: 'smooth' });  // Smooth scrolling to the project section
+      }
+    }, 400);  // Delay to ensure navigation completes
+  };
 
   return (
     <div className="container mx-auto px-8 py-12 mt-7">
@@ -52,6 +66,14 @@ const Sahyog = () => {
           ))}
         </div>
       </div>
+      {/* Back Button */}
+      <button 
+    onClick={handleBackClick}
+    className="mt-6 ml-14 px-4 py-2 bg-black text-white rounded-full border border-gray-600 hover:bg-gray-700 shadow-md"
+>
+    Back to Home
+</button>
+
     </div>
   );
 };
